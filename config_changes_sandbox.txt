@@ -1,0 +1,28 @@
+-----------------------------
+Running application on sandbox changes:
+-----------------------------------
+
+Storm changes:
+--------------
+Change in storm.yaml config file: Path : /opt/mapr/apache-storm-0.10.1/conf
+
+storm.zookeeper.servers:
+     - "172.16.210.27"  #MapR sandbox IP
+storm.zookeeper.port: 5181 #Zookeeper port
+
+nimbus.host: "172.16.210.27"
+nimbus.thrift.port: 6627
+
+-----------------------
+Kafka changes:
+-----------------------
+Change in server.properties : Path: /opt/mapr/kafka_2.11-0.10.0.0/config
+##Socket server changes
+
+# The port the socket server listens on
+port=9092
+
+# Hostname the broker will bind to. If not set, the server will bind to all interfaces
+host.name=172.16.210.27
+
+zookeeper.connect=172.16.210.27:5181
